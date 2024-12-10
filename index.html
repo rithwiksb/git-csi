@@ -60,7 +60,21 @@
         <p class="author">~ Shahid Kapoor</p>
     </div>
     <script>
-        alert("Hello, this is an alert");
-    </script>
+        // Trigger alert when the page loads
+        window.onload = function () {
+            if (confirm("Press OK to proceed.")) {
+                // Flash the blue screen
+                const blueScreen = document.getElementById("blue-screen");
+                const content = document.getElementById("content");
+                blueScreen.style.display = "block";
+
+                setTimeout(() => {
+                    // Hide the blue screen and show the content after 1 second
+                    blueScreen.style.display = "none";
+                    content.style.display = "block";
+                }, 1000);
+            }
+        };
+        </script>
 </body>
 </html>
